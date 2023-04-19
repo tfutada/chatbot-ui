@@ -13,10 +13,12 @@ export interface PluginKey {
 
 export enum PluginID {
   GOOGLE_SEARCH = 'google-search',
+  QDRANT_SEARCH = 'qdrant-search',
 }
 
 export enum PluginName {
   GOOGLE_SEARCH = 'Google Search',
+  QDRANT_SEARCH = 'Qdrant Search',
 }
 
 export const Plugins: Record<PluginID, Plugin> = {
@@ -34,6 +36,11 @@ export const Plugins: Record<PluginID, Plugin> = {
       },
     ],
   },
+  [PluginID.QDRANT_SEARCH]: {
+    id: PluginID.QDRANT_SEARCH,
+    name: PluginName.QDRANT_SEARCH,
+    requiredKeys: [],
+  }
 };
 
 export const PluginList = Object.values(Plugins);

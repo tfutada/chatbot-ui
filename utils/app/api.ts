@@ -9,5 +9,9 @@ export const getEndpoint = (plugin: Plugin | null) => {
     return 'api/google';
   }
 
+  if (plugin.id === PluginID.QDRANT_SEARCH) {
+    return 'api/qdrant';
+  }
+
   return 'api/chat';
 };
